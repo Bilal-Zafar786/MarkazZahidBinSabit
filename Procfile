@@ -1,1 +1,1 @@
-web: gunicorn MakarZaidBinSabitApp.wsgi
+web: gunicorn MakarZaidBinSabit.wsgi
