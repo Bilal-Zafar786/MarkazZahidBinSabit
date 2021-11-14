@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h1 style="text-align: center;" class="mt-4">
+      Student Registration
+    </h1>
+    <br>
+    <form class="form" action="/registration" method="POST">
+        {% csrf_token %}
+    <div class="container col-lg-6 col-sm-6 col-6">
+        <label>
+          <b>
+            Roll Number
+          </b>
+        </label>
+        <input type="number" class="form-control" name="roll" placeholder="Ex: 1234566"><br>
+
+        <label>
+          <b>
+            Name
+          </b>
+        </label>
+        <input type="text" class="form-control" name="name" placeholder="Ex: Omer" required><br>
+
+                <label>
+          <b>
+            B Form
+          </b>
+        </label>
+        <input type="file" class="form-control" name="bform" required><br>
+
+
+
+        <label>
+          <b>
+            Father Name
+          </b>
+        </label>
+        <input type="text" class="form-control" name="f_name" placeholder="Ex: Ali" required><br>
+
+                <label>
+          <b>
+            DoB
+          </b>
+        </label>
+        <input type="date" class="form-control" name="dob" placeholder="DD/MM/YYYY" required><br>
+
+
+
+        <label>
+          <b>
+            CNIC
+          </b>
+        </label>
+        <input type="number" class="form-control" name="cnic" placeholder="Ex: 38254-2535996-3" required><br>
+
+
+        <label>
+          <b>
+            Address
+          </b>
+        </label>
+        <input type="text" class="form-control" name="address" placeholder="Ex: H#50-A, St#02, Gulraiz 2, Rwp" required><br>
+
+        <label>
+          <b>
+            Cell No.
+          </b>
+        </label>
+        <input type="number" class="form-control" name="cell" placeholder="Ex: 0300-5845657" required><br>
+
+
+        <label>
+          <b>
+            Addmission
+          </b>
+        </label>
+        <input type="date" class="form-control" name="addmission" placeholder="Day/Month/Year" required><br>
+
+        <label>
+          <b>
+            Promised Fee
+          </b>
+        </label>
+        <input type="number" class="form-control" name="promised" placeholder="Ex: 50000" required><br>
+
+        <input type="submit" class="btn btn-outline-success col-4" value="Register">
+        <input type="reset" class="btn btn-outline-danger col-4" value="Reset">
+        </form>
+    </div>
+
+{% endblock %}
