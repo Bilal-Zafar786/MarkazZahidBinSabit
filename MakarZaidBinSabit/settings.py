@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os.path
 from pathlib import Path
-import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -74,29 +74,17 @@ WSGI_APPLICATION = 'MakarZaidBinSabit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'MarkazDB',
-#         'USER': 'postgres',
-#         'PASSWORD': 'root1234',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dclerp7git26j2',
-        'USER': 'hvloyltjlstxje',
-        'PASSWORD': 'ea422e81d30769b76f28a5a834cc0512f38a2172593cbb922f3634d4a577ef08',
-        'HOST': 'ec2-54-160-103-135.compute-1.amazonaws.com',
+        'NAME': 'MarkazDB',
+        'USER': 'postgres',
+        'PASSWORD': 'root1234',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
