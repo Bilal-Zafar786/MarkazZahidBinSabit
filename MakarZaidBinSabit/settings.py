@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os.path
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +26,8 @@ SECRET_KEY = 'django-insecure-9o+9odks_0-s0u66r%2n8i&v$62*w==n9h#nn%6*mmnfy@aow1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['markaz-zaid-bin-sabit-test.herokuapp.com']
 
 # Application definition
 
@@ -74,16 +75,29 @@ WSGI_APPLICATION = 'MakarZaidBinSabit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'MarkazDB',
+#         'USER': 'postgres',
+#         'PASSWORD': 'root1234',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'MarkazDB',
-        'USER': 'postgres',
-        'PASSWORD': 'root1234',
-        'HOST': '127.0.0.1',
+        'NAME': 'de9lljne2h3u5r',
+        'USER': 'pjwjabnfjvwmjz',
+        'PASSWORD': '42e226eb01a646c287c0d82976c44559f83786bdcf55c7861980658f4cadd783',
+        'HOST': 'ec2-52-204-72-14.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
+
+
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
