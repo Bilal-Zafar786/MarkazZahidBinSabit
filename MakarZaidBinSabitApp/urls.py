@@ -1,10 +1,11 @@
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import Home,Registration
+from .views import Home,Registration,Record
 urlpatterns = [
     path('',Home.as_view(),name='home'),
     path('registration',Registration.as_view(),name='registration'),
+    path('record',Record.as_view(),name='record'),
     # path('progress',Progress.as_view(),name='progress'),
     # path('progress',Progress.as_view(),name='progress'),
     # path('fee',Fee.as_view(),name="fee")

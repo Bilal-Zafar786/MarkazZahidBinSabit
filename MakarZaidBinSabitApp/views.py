@@ -51,3 +51,9 @@ class Registration(View):
         )
         student_registration.save()
         return redirect('registration')
+
+
+class Record(View):
+    def get(self,request):
+        data = Student_Registration.objects.all()
+        return render(request,'see_record.html',{'data':data})
